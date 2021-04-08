@@ -9,7 +9,7 @@ text-align: center;
 margin-bottom: 20px;
 }
 
-.profile-images-card{
+.Image-Edit-Card{
 	margin: auto;
 	display: table;
 	background: #fff;
@@ -17,7 +17,7 @@ margin-bottom: 20px;
 	box-shadow: 0px 0px 5px #ddd;
 }
 
-.profile-images{
+.Image-Edit{
 	width: auto;
 	height: auto;
 	background: #fff;

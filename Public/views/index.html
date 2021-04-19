@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<link rel="icon" href="images/image.png">
-<title>Image Editor</title>
-<meta charset="UTF-8">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,22 +6,53 @@
 
 	<div class="Image-Edit-Card">
 		<div class="Image-Edit">
-			<img src="images/image.png" id="upload-img">
+
+		<!-------->
+<div class="RotateR">
+	<div class="RotateL">
+		<div class="FlipX">
+			<div class="FlipY">
+				<div class="Brightness">
+					<div class="Grey">
+						<div class="Blur">
+							<img class="Blur" src="images/image.png" id="upload-img">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		<!-------->
+
 		</div>
 		<div class="custom-file">
 			<b>
 			<label for="fileupload">&nbsp Upload Image &nbsp</label>
-			<input type="file" id="fileupload">
+			<input type="file" id="fileupload" onclick="ImageUp()">
 			</b>
 		</div>
+	<!--------> <!-------->
+	<label for=blurInput>Blur:</label>
+	<input type="range" id="blurInput" min="0"  max="10" step="2" value="0" onchange="Blur(this.value)">
+	<!-------->
+	<label for=greyInput>Greyscale:</label>
+	<input type="range" id="greyInput" min="0" max="100" value="0" onchange="Grey(this.value)">
+	<!-------->
+	<label for=brightInput>Brightness:</label>
+	<input type="range" id="brightInput" min="0" max="200" step="5" value="100" onchange="Brightness(this.value)">
+	<div>
+	<!--------> <!-------->
+	<button onclick="FlipX()">Flip Horizontally</button>
+	<!-------->
+	<button onclick="FlipY()">Flip Vertically</button>
+	<!-------->
+	<button onclick="RotateR()">Rotate Right</button>
+	<!-------->
+	<button onclick="RotateL()">Rotate Left</button>
+
 	</div>
-
-
-
-	
-
-
-
+<!----------------------------------------------------------------------->
 <script src="js/jquery-latest.min.js"></script>
 <script>
 	$(function(){
@@ -37,7 +61,78 @@
 			$("#upload-img").attr("src",x);
 			console.log(event);
 		});
-	})
+	});
+</script>
+<!-------------------------------------->
+
+<script type="text/javascript">
+        	// var _ = document.querySelector("html");
+        	// _.className = ""
+        	// _.classList.add()
+function ImageUp() {
+	imageup = true
+}
+	function Blur(_blurnum) {
+	if(imageup) {
+		blurnum = _blurnum + "px"
+        document.documentElement.style.setProperty(`--blurnum`,blurnum)
+    }
+    } ///
+    function Grey(_greynum) {
+    if(imageup) {
+		greynum = _greynum + "%"
+        document.documentElement.style.setProperty(`--greynum`,greynum)
+    }
+    } ///
+    function Brightness(_brightnum) {
+    if(imageup) {
+		brightnum = _brightnum + "%"
+        document.documentElement.style.setProperty(`--brightnum`,brightnum)
+    }
+    } ///
+    //////////////////////////////////////////
+    	let flippedX = false
+    function FlipX() {
+    if(imageup) {
+    	if(flippedX == true) {
+    		document.documentElement.style.setProperty(`--flipx`,"1")
+    		flippedX = false
+    	}
+    	else if(flippedX != true) {
+    		document.documentElement.style.setProperty(`--flipx`,"-1")
+    		flippedX = true
+    	}
+    }
+    } ///
+    	let flippedY = false
+    function FlipY() {
+    if(imageup) {
+    	if(flippedY == true) {
+    		document.documentElement.style.setProperty(`--flipy`,"1")
+    		flippedY = false
+    	}
+    	else if(flippedY != true) {
+    		document.documentElement.style.setProperty(`--flipy`,"-1")
+    		flippedY = true
+    	}
+    }
+    } ///
+		let degreeR = 90
+    function RotateR() {
+    if(imageup) {
+    	rotateR = degreeR + "deg"
+        document.documentElement.style.setProperty(`--rotateR`,rotateR)
+        degreeR += 90
+    }
+    } ///
+    		let degreeL = -90
+    function RotateL() {
+    if(imageup) {
+    	rotateL = degreeL + "deg"
+        document.documentElement.style.setProperty(`--rotateL`,rotateL)
+        degreeL -= 90
+    }
+    } ///
 </script>
 </body>
 </html>

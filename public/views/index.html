@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--   -->
+<html>
+<link rel="stylesheet" href="css/style.css">
+<head>
+	  <meta charset="utf-8"/>
+    <style type="text/css"></style>
+</head>
+<body>
+
+<h2 class="text-center" style="color:white;">CS Image Editor</h2>
+
+	<div class="Image-Edit-Card">
+		<div class="Image-Edit">
+
+	<img src="images/image.png" id="upload-img">
+
+		</div>
+		<div class="custom-file">
+			<b>
+			<form action="fileupload" method="post" enctype="multipart/form-data">
+			<label for="fileupload">&nbsp Upload Image &nbsp</label>
+			<input type="file" id="fileupload" name="filetoupload"><br>
+			<input type="submit">
+			</b>
+		</div>
+<!----------------------------------------------------------------------->
+<script src="js/jquery-latest.min.js"></script>
+<script>
+	$(function(){
+		$("#fileupload").change(function(event) {
+			var x = URL.createObjectURL(event.target.files[0]);
+			$("#upload-img").attr("src",x);
+			console.log(event);
+		});
+	});
+</script>
+</body>
+</html>

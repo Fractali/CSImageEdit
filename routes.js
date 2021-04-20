@@ -25,11 +25,12 @@ router.post('/fileupload', function(req, res){
         imageName = files.filetoupload.name;
         console.log(imageName)
         var newpath = __dirname + '/public/views/images/' + files.filetoupload.name;
-        mv(oldpath, newpath, function (err) {
+        /*mv(oldpath, newpath, function (err) {
             if (err) throw err;
             res.write('File uploaded and moved!');
             res.end();
-        });
+        });*/
+        res.sendFile(__dirname + "/public/views/editor.html");
     });
 });
 

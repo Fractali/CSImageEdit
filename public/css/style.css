@@ -22,6 +22,12 @@ margin-bottom: 10px;
 text-shadow: 0px 0px 2px #ddd
 
 }
+.byname{
+text-align: center;
+font-size: 15px;
+margin-bottom: 10px;
+text-shadow: 0px 0px 2px #ddd
+}
 
 .Image-Edit-Card{
 	margin: auto;
@@ -86,7 +92,7 @@ text-shadow: 0px 0px 2px #ddd
 	display: table;
 	margin: auto;
 	margin-top: 20px;
-	outline: 2.2px groove black;
+	outline: 1px groove black;
 	background-color:#f2f2f2;
 	//box-shadow: 0px 0px 5px #000;
 }
@@ -97,12 +103,34 @@ text-shadow: 0px 0px 2px #ddd
 	display: table;
 	margin: auto;
 	margin-top: 20px;
-	outline: 2.2px groove black;
+	outline: 1px groove black;
 	background-color:#f2f2f2;
-	opacity: 0.5;
+	opacity: 0.7;
 	//box-shadow: 0px 0px 5px #000;
 }
+
+.edit label{
+
+background: #0066A2;
+
+color: white;
+
+border-style: outset;
+
+border-color: #0066A2;
+
+height: 50px;
+
+width: 100px;
+
+font: bold 15px arial, sans-serif;
+
+text-shadow:none;
+
+}
+
 body {
   background-image: url('background.jpg');
   background-repeat: no-repeat;
+  background-size: cover;
 }

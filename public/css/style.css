@@ -1,24 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900|Open+Sans:300,400|Oswald:400,700');
-* { padding: 0; margin: 0; box-sizing: border-box }
-body {font-family:'Lato',sans-serif;padding: 30px;background: #eaebeb;}
-
-/**************/
-
-:root {
-	--blurnum:0px;
-	--greynum:0%;
-	--brightnum:100%;
-	--flipx:1;
-	--flipy:1;
-	--rotateR:0deg;
-	--rotateL:0deg;
-}
-
-
-.text-center{
-text-align: center;
-font-size: 50px;
-margin-bottom: 10px;
 text-shadow: 0px 0px 2px #ddd
 
 }
@@ -28,7 +7,13 @@ font-size: 15px;
 margin-bottom: 10px;
 text-shadow: 0px 0px 2px #ddd
 }
-
+.Center{
+	margin: auto;
+	display: table;
+	background: transparent;
+	padding: 30px 40px;
+	
+}
 .Image-Edit-Card{
 	margin: auto;
 	display: table;
@@ -49,15 +34,19 @@ text-shadow: 0px 0px 2px #ddd
 
 /*Image transformers//////////////////*/
 	.FlipX{ /*Flip Horizontally*/
+		transform-origin: center;
 		transform: scaleX(var(--flipx));
 	}
 	.FlipY{ /*Flip Vertically*/
+		transform-origin: center;
 		transform: scaleY(var(--flipy));
 	}
 	.RotateR{ /*90 degrees right*/
+		transform-origin: center;
 		transform: rotate(var(--rotateR))
 	}
 	.RotateL{ /*90 degrees Left*/
+		transform-origin: center;
 		transform: rotate(var(--rotateL))
 	}
 /*////////////////////////////////////*/
@@ -66,7 +55,7 @@ text-shadow: 0px 0px 2px #ddd
 	height: 100%;
 	background: #fff;
 	border-radius: 0%;
-	overflow: hidden;margin-right: 20px;
+	overflow: hidden;
 	margin-top: 20px;
 	margin-right: 20px;
 	margin-left: 20px;

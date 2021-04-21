@@ -127,13 +127,12 @@
 	function Break() {
 			var img = document.getElementById("image1")
 		if (toggle == true) {
-			document.documentElement.style.setProperty(`--imagespace`,"50px")
+				imagespace = (img.width - img.height) + "px"
+			document.documentElement.style.setProperty(`--imagespace`,"imagespace")
 			toggle = false
 		}
 		else {
-			
-				imagespace = (img.width - img.height)/2 + + 50 + "px"
-			
+				imagespace = (img.width - img.height)/2 + 50 + "px"
 			document.documentElement.style.setProperty(`--imagespace`,imagespace)
 			toggle = true
 		}

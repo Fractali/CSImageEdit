@@ -11,9 +11,9 @@
 <body>
 
 	<div class="Image-Edit-Card">
-		<div class="Image-Edit">
-
 			<!-------->
+		<div class="Image-Edit">
+			<div class="Center">
 <div class="RotateR">
 	<div class="RotateL">
 		<div class="FlipX">
@@ -21,8 +21,7 @@
 				<div class="Brightness">
 					<div class="Grey">
 						<div class="Blur">
-
-	<img id="image1" src="showImage()" alt="" height="285" width="380">
+	<img style="text-align:center;" id="image1" src="showImage()" alt="" height="auto" width="auto">
 						</div>
 					</div>
 				</div>
@@ -30,6 +29,8 @@
 		</div>
 	</div>
 </div>
+	</div>
+<br id=Break class=Break>
 <!--------> <!-------->
 	<label for=blurInput>Blur:</label>
 	<input type="range" id="blurInput" min="0"  max="10" step="2" value="0" onchange="Blur(this.value)">
@@ -39,20 +40,17 @@
 	<!-------->
 	<label for=brightInput>Brightness:</label>
 	<input type="range" id="brightInput" min="0" max="200" step="5" value="100" onchange="Brightness(this.value)">
-	<div></div>
 	<!--------> <!-------->
 	<button onclick="FlipX()">Flip Horizontally</button>
 	<!-------->
 	<button onclick="FlipY()">Flip Vertically</button>
 	<!-------->
-	<button onclick="RotateR()">Rotate Right</button>
+	<button onclick="RotateR();Break()">Rotate Right</button>
 	<!-------->
-	<button onclick="RotateL()">Rotate Left</button>
-
+	<button onclick="RotateL();Break()">Rotate Left</button>
+		<!-------->
 	</div>
 </div>
-		<!-------->
-
 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script>
 
@@ -68,10 +66,7 @@
 		ImName=data.imageName
 		return ImName;
 	}
-
-	$(document).ready(function(){
-      $("#showImageButton").ready(showImage);
-  	});
+    $(document).ready(showImage);
 </script>
 	<!-------------------------------------->
 
@@ -121,12 +116,28 @@
 	        document.documentElement.style.setProperty(`--rotateR`,rotateR)
 	        degreeR += 90
 	    } ///
-	    		let degreeL = -90
+	    	let degreeL = 90
 	    function RotateL() {
 	    	rotateL = degreeL + "deg"
 	        document.documentElement.style.setProperty(`--rotateL`,rotateL)
 	        degreeL -= 90
     } ///
+	//////////////////////////////////////////
+		let toggle = false
+	function Break() {
+			var img = document.getElementById("image1")
+		if (toggle == true) {
+			document.documentElement.style.setProperty(`--imagespace`,"50px")
+			toggle = false
+		}
+		else {
+			
+				imagespace = (img.width - img.height)/2 + + 50 + "px"
+			
+			document.documentElement.style.setProperty(`--imagespace`,imagespace)
+			toggle = true
+		}
+	}
 </script>
 </body>
 </html>

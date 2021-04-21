@@ -146,6 +146,7 @@
     } ///
 	//////////////////////////////////////////
 		let toggle = false
+		let toggle2 = false
 	function Break() {
 			var img = document.getElementById("image1")
 		if (toggle == true) {
@@ -157,6 +158,17 @@
 				imagespace = (img.width - img.height)/2 + "px"
 			document.documentElement.style.setProperty(`--imagespace`,imagespace)
 			toggle = true
+		}
+		if(img.width <= img.height) { //If image is tall
+			if(toggle2 == true) {//////card width decreasing/////
+				document.documentElement.style.setProperty(`--cardwidth`,"auto")
+				toggle2 = false
+			}
+			else {//////card width increasing/////
+				cardwidth = img.height + "px"
+				document.documentElement.style.setProperty(`--cardwidth`,cardwidth)
+				toggle2 = true
+			}
 		}
 	}
 </script>

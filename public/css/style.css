@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900|Open+Sans:300,400|Oswald:400,700');
+* { padding: 0; margin: 0; box-sizing: border-box }
+body {font-family:'Lato',sans-serif;padding: 30px;background: #eaebeb;}
+
+/**************/
+
+
+.text-center{
+text-align: center;
+font-size: 50px;
+margin-bottom: 10px;
 text-shadow: 0px 0px 2px #ddd
 
 }
@@ -7,55 +18,22 @@ font-size: 15px;
 margin-bottom: 10px;
 text-shadow: 0px 0px 2px #ddd
 }
-.Center{
-	margin: auto;
-	display: table;
-	background: transparent;
-	padding: 30px 40px;
-	
-}
+
 .Image-Edit-Card{
 	margin: auto;
 	display: table;
 	background: #fff;
 	padding: 30px 40px;
-	box-shadow: 0px 0px 2px #ddd;
-}
-/*Image editors///////////////////////*/
-	.Blur{
-		filter: blur(var(--blurnum));
-	}
-	.Grey{
-		filter: grayscale(var(--greynum));
-	}
-	.Brightness{
-		filter: brightness(var(--brightnum));
-	}
+	box-shadow: 0px 0px 5px #ddd;
 
-/*Image transformers//////////////////*/
-	.FlipX{ /*Flip Horizontally*/
-		transform-origin: center;
-		transform: scaleX(var(--flipx));
-	}
-	.FlipY{ /*Flip Vertically*/
-		transform-origin: center;
-		transform: scaleY(var(--flipy));
-	}
-	.RotateR{ /*90 degrees right*/
-		transform-origin: center;
-		transform: rotate(var(--rotateR))
-	}
-	.RotateL{ /*90 degrees Left*/
-		transform-origin: center;
-		transform: rotate(var(--rotateL))
-	}
-/*////////////////////////////////////*/
+}
+
 .Image-Edit{
 	max-width: 100%;
 	height: 100%;
 	background: #fff;
 	border-radius: 0%;
-	overflow: hidden;
+	overflow: hidden;margin-right: 20px;
 	margin-top: 20px;
 	margin-right: 20px;
 	margin-left: 20px;
@@ -83,6 +61,7 @@ text-shadow: 0px 0px 2px #ddd
 	margin-top: 20px;
 	outline: 1px groove black;
 	background-color:#f2f2f2;
+
 	//box-shadow: 0px 0px 5px #000;
 }
 .custom-file:hover label{

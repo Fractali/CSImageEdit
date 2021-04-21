@@ -13,7 +13,17 @@ body {font-family:'Lato',sans-serif;padding: 30px;background: #eaebeb;}
 	--rotateR:0deg;
 	--rotateL:0deg;
 }
-
+.Break{
+    display: block;
+    content: "";
+    margin-top: var(--imagespace);
+}
+.Center{
+	margin: auto;
+	display: table;
+	background: transparent;
+		
+}
 
 .text-center{
 text-align: center;

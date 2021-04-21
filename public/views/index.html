@@ -33,7 +33,7 @@
 		<div class="edit">
 		<b>	
 			<div style="text-align:center" >  
-    		<input type="submit" value = EDIT id="edit" style="font-family: Helvetica ; font-size: 20px; font-weight: bold; background-color: white; padding: 10px; <" >
+    		<input disabled="false" type="submit" value = EDIT id="edit" style="font-family: Helvetica ; font-size: 20px; font-weight: bold; background-color: white; padding: 10px; <" >
 			</div>  
 			</b>
 		</div>
@@ -47,8 +47,15 @@
 			var x = URL.createObjectURL(event.target.files[0]);
 			$("#upload-img").attr("src",x);
 			console.log(event);
+			EnableSubmit();
 		});
 	});
+	function EnableSubmit(){
+		if(fileupload.value == "") 
+			alert("Please Uplaod Image")
+		else 
+			$("#edit").prop("disabled",false)
+	}
 </script>
 </body>
 </html>

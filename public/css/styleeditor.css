@@ -29,15 +29,15 @@ body {font-family:'Lato',sans-serif;padding: 30px;background: #eaebeb;}
 text-align: center;
 font-size: 50px;
 margin-bottom: 10px;
-text-shadow: 0px 0px 2px #ddd
+text-shadow: 0px 0px 2px #fff
 
 }
 
 .Image-Edit-Card{
 	margin: auto;
 	display: table;
-	background: #fff;
-	padding:220px 520px;
+	//background: #fff;
+	padding:auto;
 	box-shadow: 0px 0px 5px #ddd;
 
 }
@@ -66,10 +66,90 @@ text-shadow: 0px 0px 2px #ddd
 		transform: rotate(var(--rotateL))
 	}
 /*////////////////////////////////////*/
+.FlipX {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  //color: blue;
+  //padding: 15px 32px;
+  //text-align: center;
+  //text-decoration: none;
+  //display: inline-block;
+  font-size: 16px;
+}
+.blurslider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 7px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  vertical-align: middle;
+}
+.blurslider:hover {
+  opacity: 1;
+}
+
+.blurslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 25px;
+  background: #006eff;
+  cursor: pointer;
+}	
+.greyscaleslider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 7px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  vertical-align: middle;
+}
+.greyscaleslider:hover {
+  opacity: 1;
+}
+
+.greyscaleslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 25px;
+  background: #006eff;
+  cursor: pointer;
+}	
+.brightnessslider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 7px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  vertical-align: middle;
+}
+.brightnessslider:hover {
+  opacity: 1;
+}
+
+.brightnessslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 25px;
+  background: #006eff;
+  cursor: pointer;
+}	
 .Image-Edit{
 	max-width: 100%;
 	height: 100%;
-	background: #fff;
+	text-align: center;
+	//background: #fff;
 	border-radius: 0%;
 	overflow: hidden;margin-right: 20px;
 	margin-top: 20px;

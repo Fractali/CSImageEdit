@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title> Login and Registration</title>
+  <link rel="stylesheet" href="css/form_style.css">
+    <meta charset="utf-8"/>
+    <style type="text/css"></style>
+</head>
+<body>
+  <div calss="Login-Page">
+    <div class="form">
+      <form class="register-form">
+        <input type="text" placeholder="name"/>
+           <input type="text" placeholder="password"/>
+            <input type="text" placeholder="email id"/>
+            <button>Create</button>
+            <p class="message"> Already Registered? <a href="#">Login</a>
+            </p>
+          </form>
+          <form class="Login-form">
+            <input type="text" placeholder="user name"/>
+             <input type="password" placeholder="password"/>
+
+
+            <button onclick="location.href='http://localhost:4010/upload'" type="button">
+         Login</button>
+            
+             <p class="message">Not Registered? <a href="#">Register</a>
+             </p>
+          </form>
+
+        </div>
+      </div>
+
+<script src='https://code.jquery.com/jquery-3.2.1.min.js'>
+  
+</script>
+
+<script>
+  $(document).ready(function(){
+  $('.message a').click(function(){
+    $('form').animate({height: "toggle", opacity: "toggle"},"slow");
+  });
+})
+</script>
+    </body>
+    </html>

@@ -5,9 +5,11 @@ var mv = require('mv');
 let imageName;
 
 router.get("/",function(req,res){
-        res.sendFile(__dirname + "/public/views/index.html");
+        res.sendFile(__dirname + "/public/views/form.html");
 });
-
+router.get("/upload",function(req,res){
+        res.sendFile(__dirname + "/public/views/upload.html");
+});
 router.get("/editor",function(req,res){
         res.sendFile(__dirname + "/public/views/editor.html");
 });

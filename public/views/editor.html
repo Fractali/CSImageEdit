@@ -14,7 +14,7 @@
 <body>
 <h2 class="text-center" style="color:white;">Edit Image</h2>
 <br>
-	<div class="Image-Edit-Card">
+	<div class="Image-Edit-Card" alt="" height="auto" width="auto">
 			<!-------->
 		<div class="Image-Edit">
 			<div class="Center">
@@ -25,7 +25,15 @@
 				<div class="Brightness">
 					<div class="Grey">
 						<div class="Blur">
+							<div class="Contrast">
+								<div class="Invert">
+									<div class="Opacity">
+										<div class="Filter">
 	<img style="text-align:center;" id="image1" src="showImage()" alt="" height="auto" width="auto">
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -53,6 +61,22 @@
 	<label for=brightInput>Brightness</label>
 	<br>
 	<input type="range" id="brightInput" min="0" max="200" step="5" value="100" onchange="Brightness(this.value)" class=brightnessslider>
+	<br>
+	<!-------->
+	<label for=contrastInput>Contrast</label>
+	<br>
+	<input type="range" id="brightInput" min="0" max="200" step="5" value="100" onchange="Contrast(this.value)" class=contrastslider>
+	<br>
+	<!-------->
+	<label for=opacityInput>Opacity</label>
+	<br>
+	<input type="range" id="opacityInput" min="0" max="100" value="100" onchange="Opacity(this.value)" class=opacityslider>
+	<br>
+	<!-------->
+	<label for=invertInput>Invert Colors</label>
+	<br>
+	<input type="range" id="invertInput" min="0" max="100" step="100" value="0" onchange="Invert(this.value)" class=invertslider>
+	<br>
 	</p>
 </b>
 	
@@ -108,6 +132,19 @@
 	    function Brightness(_brightnum) {
 			brightnum = _brightnum + "%"
 	        document.documentElement.style.setProperty(`--brightnum`,brightnum)
+	    } ///
+	     function Contrast(_contrastnum) {
+			contrastnum = _contrastnum + "%"
+	        document.documentElement.style.setProperty(`--contrastnum`,contrastnum)
+	    } ///
+	    function Opacity(_opacitynum) {
+			opacitynum = _opacitynum + "%"
+	        document.documentElement.style.setProperty(`--opacitynum`, opacitynum)
+	    } ///
+	    
+	    function Invert(_invertnum) {
+			invertnum = _invertnum + "%"
+	        document.documentElement.style.setProperty(`--invertnum`, invertnum)
 	    } ///
 	    //////////////////////////////////////////
 	    	let flippedX = false

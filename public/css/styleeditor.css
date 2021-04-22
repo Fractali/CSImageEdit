@@ -82,7 +82,7 @@ text-shadow: 0px 0px 2px #fff
 /*////////////////////////////////////*/
 .invertslider {
   -webkit-appearance: none;
-  width: 50px;
+  width: 30px;
   height: 7px;
   background: #d3d3d3;
   outline: none;

@@ -8,11 +8,14 @@ body {font-family:'Lato',sans-serif;padding: 30px;background: #eaebeb;}
 	--blurnum:0px;
 	--greynum:0%;
 	--brightnum:100%;
+	--contrastnum:100%;
 	--flipx:1;
 	--flipy:1;
 	--rotateR:0deg;
 	--rotateL:0deg;
 	--cardwidth:auto;
+	--opacitynum:100%;
+	--invertnum:0%;
 }
 .Break{
     display: block;
@@ -53,6 +56,15 @@ text-shadow: 0px 0px 2px #fff
 	.Brightness{
 		filter: brightness(var(--brightnum));
 	}
+	.Contrast{
+		filter: contrast(var(--contrastnum));
+	}
+	.Opacity{
+		filter:opacity(var(--opacitynum));
+	}
+	.Invert{
+		filter:invert(var(--invertnum));
+	}
 
 /*Image transformers//////////////////*/
 	.FlipX{ /*Flip Horizontally*/
@@ -68,10 +80,32 @@ text-shadow: 0px 0px 2px #fff
 		transform: rotate(var(--rotateL))
 	}
 /*////////////////////////////////////*/
+.invertslider {
+  -webkit-appearance: none;
+  width: 50px;
+  height: 7px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  vertical-align: middle;
+}
+.invertslider:hover {
+  opacity: 1;
+}
 
+.invertslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 30px;
+  background: #006eff;
+  cursor: pointer;
+}	
 .blurslider {
   -webkit-appearance: none;
-  width: 100%;
+  width: 750px;
   height: 7px;
   background: #d3d3d3;
   outline: none;
@@ -94,7 +128,7 @@ text-shadow: 0px 0px 2px #fff
 }	
 .greyscaleslider {
   -webkit-appearance: none;
-  width: 100%;
+  width: 750px;
   height: 7px;
   background: #d3d3d3;
   outline: none;
@@ -115,9 +149,32 @@ text-shadow: 0px 0px 2px #fff
   background: #006eff;
   cursor: pointer;
 }	
+.opacityslider {
+  -webkit-appearance: none;
+  width: 750px;
+  height: 7px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  vertical-align: middle;
+}
+.opacityslider:hover {
+  opacity: 1;
+}
+
+.opacityslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 30px;
+  background: #006eff;
+  cursor: pointer;
+}	
 .brightnessslider {
   -webkit-appearance: none;
-  width: 100%;
+  width: 750px;
   height: 7px;
   background: #d3d3d3;
   outline: none;
@@ -131,6 +188,29 @@ text-shadow: 0px 0px 2px #fff
 }
 
 .brightnessslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 30px;
+  background: #006eff;
+  cursor: pointer;
+}	
+.contrastslider {
+  -webkit-appearance: none;
+  width: 750px;
+  height: 7px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  vertical-align: middle;
+}
+.contrastslider:hover {
+  opacity: 1;
+}
+
+.contrastslider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 10px;
